@@ -8,5 +8,10 @@
 <body>
     <h1>안녕하세요, Flask!</h1>
     <p>이것은 index.html 템플릿입니다.</p>
+
+    <button id="btn">클릭하세요</button>
+    <p id="msg"></p>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
