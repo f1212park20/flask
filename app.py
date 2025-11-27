@@ -5,11 +5,12 @@ app = Flask(__name__)
 
 def get_connection():
     connection = pymysql.connect(
-        host='my-mysql',  # MySQL 컨테이너 포트로 연결
+        host='my-mysql',
         user='flaskuser',
         password='flaskpass',
         database='testdb',
-        port=3306
+        port=3306,
+        cursorclass=pymysql.cursors.DictCursor  # <-- 여기가 핵심
     )
     return connection
 
