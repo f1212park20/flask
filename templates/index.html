@@ -9,6 +9,11 @@
     <h1>안녕하세요, Flask!</h1>
     <p>이것은 index.html 템플릿입니다.</p>
 
+    <ul>
+        {% for user in users %}
+            <li>{{user.id}} - {{ user.name }} </li>
+        {% endfor %}
+    </ul>
     <button id="btn">클릭하세요</button>
     <p id="msg"></p>
 
